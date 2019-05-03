@@ -1,0 +1,10 @@
+
+
+//generar keystore
+keytool -genkey -keystore myKeyStore -alias me
+
+//configurar keystore
+keytool -selfcert -keystore myKeyStore -alias me
+
+//firmar .jar
+jarsigner -keystore myKeyStore SplitMiner.jar me
